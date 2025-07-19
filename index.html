@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio | [Your Name]</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --primary-dark: #2563eb;
+            --text-color: #1f2937;
+            --light-color: #f9fafb;
+            --dark-color: #111827;
+            --accent-color: #f59e0b;
+            --gray-light: #e5e7eb;
+            --gray-medium: #9ca3af;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--light-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--gray-medium);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 1.8rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            bottom: -5px;
+            left: 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(249, 250, 251, 1) 100%);
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--gray-medium);
+            font-weight: 500;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: var(--text-color);
+            max-width: 600px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            flex: 1;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-color);
+            font-size: 1.1rem;
+        }
+
+        .personal-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .personal-info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .personal-info-item i {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .skills {
+            margin-top: 30px;
+        }
+
+        .skill-item {
+            margin-bottom: 15px;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background-color: rgba(59, 130, 246, 0.1);
+            border-radius: 4px;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        /* Resume Section */
+        .resume-container {
+            display: flex;
+            gap: 50px;
+        }
+
+        .resume-col {
+            flex: 1;
+        }
+
+        .resume-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .resume-item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .resume-item h3 {
+            font-size: 1.3rem;
+            color: var(--dark-color);
+            margin-bottom: 5px;
+        }
+
+        .resume-item h4 {
+            font-size: 1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .resume-item .date {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .resume-item p {
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            gap: 50px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: var(--transition);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(59, 130, 246, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+        }
+
+        .contact-details h3 {
+            color: var(--dark-color);
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        .contact-details p, .contact-details a {
+            color: var(--text-color);
+            font-size: 1rem;
+        }
+
+        .contact-details a:hover {
+            color: var(--primary-color);
+        }
+
+        .contact-form {
+            flex: 1;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--dark-color);
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--gray-light);
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary-color);
+            bottom: -8px;
+            left: 0;
+        }
+
+        .footer-col p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 15px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .footer-links a i {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Edit Mode */
+        .edit-mode {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1001;
+        }
+
+        .edit-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+            transition: var(--transition);
+        }
+
+        .edit-btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px) scale(1.1);
+        }
+
+        .edit-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1002;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .edit-modal-content {
+            background-color: white;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            border-radius: 10px;
+            padding: 30px;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .edit-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--gray-medium);
+        }
+
+        .edit-tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .edit-tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--gray-medium);
+        }
+
+        .edit-tab.active {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .edit-tab-content {
+            display: none;
+        }
+
+        .edit-tab-content.active {
+            display: block;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 992px) {
+            .hero-content, .about-content, .resume-container, .contact-content {
+                flex-direction: column;
+            }
+
+            .hero-image {
+                order: -1;
+                margin-bottom: 40px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.2rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .personal-info {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Vansh Jaiswal</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#resume">Resume</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span>Vansh Jaiswal</span></h1>
+                    <h2>[Management Student]</h2>
+                    <p>I'm a passionate professional with expertise in creative Work with New Ideas. With 2 years of experience, I specialize in Ms office, Senior HR Manager, Hub Assitant, Finance, Tally, Master in Basic Excel. Let me help you achieve your goals with my skills and expertise.</p>
+                    <div class="hero-btns">
+                        <a href="#contact" class="btn btn-primary">Hire Me</a>
+                        <a href="#resume" class="btn btn-outline">My Resume</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/hrvanshjaiswal?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/share/157grLai1hM/" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="[https://www.naukri.com/mnjuser/profile?id=&altresid]" target="_blank"><i class="fas fa-briefcase"></i></a>
+                        <a href="mr.vanshjaiswal008@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://uploads.onecompiler.io/42m9esecm/43pjmbupq/PICC.png" alt="Professional portrait of [Your Name] wearing formal attire with a confident smile" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <p>Get To Know More</p>
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://uploads.onecompiler.io/42m9esecm/43pjmbupq/Screenshot%202025-07-02%20104133.png" alt="Professional working at a modern office desk with laptop and notebooks" />
+                </div>
+                <div class="about-text">
+                    <h3>Professional Student</h3>
+                    <p>I am a dedicated Team Leader with 2 years of experience in Management. My expertise includes Time, Team, Work Load& Handle in Tight Situation Management etc. I'm committed to delivering high-quality work and continuous learning.</p>
+                    <p>My approach combines technical excellence with creative problem-solving to deliver innovative solutions that drive business results.</p>
+                    
+                    <div class="personal-info">
+                        <div class="personal-info-item">
+                            <i class="fas fa-user"></i>
+                            <span><strong>Name:</strong> Vansh Jaiswal</span>
+                        </div>
+                        <div class="personal-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span><strong>Email:</strong> mr.vanshjaiswal008@gmail.com</span>
+                        </div>
+                        <div class="personal-info-item">
+                            <i class="fas fa-phone"></i>
+                            <span><strong>Phone:</strong> +91 8960416293</span>
+                        </div>
+                        <div class="personal-info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span><strong>Location:</strong> Unnao Uttar Pardesh, India</span>
+                        </div>
+                        <div class="personal-info-item">
+                            <i class="fab fa-linkedin"></i>
+                            <span><strong>LinkedIn:</strong> Mr.Vansh Jaiswal/</span>
+                        </div>
+                        <div class="personal-info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span><strong>Naukri:</strong> Mr.Vansh Jaiswal</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skills">
+                        <h3>My Skills</h3>
+                        <div class="skill-item">
+                            <div class="skill-name"><span>Communication</span><span>90%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name"><span>Leadership </span><span>85%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name"><span>Management</span><span>90%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="section" id="resume">
+        <div class="container">
+            <div class="section-title">
+                <p>My Qualifications</p>
+                <h2>Resume</h2>
+            </div>
+            
+            <div class="resume-container">
+                <div class="resume-col">
+                    <h3 class="resume-col-title">Education</h3>
+                    
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <div>
+                                <h3>Bachelor's of Business Administration </h3>
+                                <h4>Chatrapati Sahuji Maharaj University</h4>
+                            </div>
+                            <span class="date">2023 - Present</span>
+                        </div>
+                        <p>Focused on business and management principles. They learn about various aspects of business, including finance, marketing, human resources, and operations. The knowledge and skills needed for careers in the corporate world, entrepreneurship, or further academic study. </p>
+                    </div>
+                    
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <div>
+                                <h3>Intermediate</h3>
+                                <h4>Up Board</h4>
+                            </div>
+                            <span class="date">2012 -  2023</span>
+                        </div>
+                        <p> Physics, chemistry, and mathematics. This is a popular stream for students interested in the fields of science and technology.</p>
+                    </div>
+                </div>
+                
+                <div class="resume-col">
+                    <h3 class="resume-col-title">Experience</h3>
+                    
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <div>
+                                <h3>Hub Assitant</h3>
+                                <h4>Ekart</h4>
+                            </div>
+                            <span class="date">May2025 - July 2025</span>
+                        </div>
+                        <p>Responsible for managing pickups, pending shipments, and clearing CV pending across official (Flipkart, Shopsy, Myntra) and third-party platforms (Amazon, Boat, Snapdeal, etc.).
+Skilled in shipment tracking, cash handling, resolving data mismatches, and coordinating returns/replacements to warehouse and third-party brands with hands-on operational experience.
+</p>
+                    </div>
+                    
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <div>
+                                <h3>Senior HR Manager Intern </h3>
+                                <h4>TEN:Marketing Consultancy </h4>
+                            </div>
+                            <span class="date">Sep 2024 - July 2025</span>
+                        </div>
+                        <p>Efficiently managing a team of 10 HR Managers, addressing employee issues and conflicts to ensure smooth operations.
+Responsible for generating employee IDs and facilitating timely replacements for outgoing staff.
+</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://drive.google.com/file/d/1icBhp_kDOIM3gik0uCBZTdYtnBvs1FNF/view?usp=drivesdk" class="btn btn-primary" download>Download Resume</a>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <p>Get In Touch</p>
+                <h2>Contact Me</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <a href="https://maps.app.goo.gl/ReGF5rCm7RywnmU58"><p>Jawahar Nagar, 
+                            Near by Durga Computer,
+                            Unnao, Uttar Pardesh-209801 </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mr.vanshjaiswal008@gmail.com">mr.vanshjaiswal008@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <a href="tel:+918960416293">+91 8960416293</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <a href="https://www.linkedin.com/in/hrvanshjaiswal?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Mr.Vansh Jaiswal</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Naukri Profile</h3>
+                            <a href="https://www.naukri.com/mnjuser/profile?id=&altresid" target="_blank">Mr.Vansh Jaiswal</a>
+                        </div>
+                    </div>
+                     <div class="contact-card">
+                        <div class="contact-icon">
+                           <a href="https://www.facebook.com/share/157grLai1hM/" target="_blank"><i class="fab fa-facebook-f"></i></a>  
+                        </div>
+                        <div class="contact-details">
+                            <h3>facebook Profile</h3>
+                            <a href="https://www.facebook.com/share/157grLai1hM/" target="_blank">Mr.Vansh Jaiswal</a>
+                        </div>
+                    </div>
+                    </div>
+                  </section>
+     <!-- Resume Section -->
+    <section class="section" id="resume">
+        <div class="container">
+            <div class="section-title">
+                <p>My Qualifications</p>
+                <h2>Certificate </h2>
+            </div>
+             
+            <div class="resume-container">
+                <div class="resume-col">
+                    <h3 class="resume-col-title">Education</h3>
+                    
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <div>
+                                <h3>Master in Basic Excel </h3>
+                                <h4>ALISON</h4>
+                            </div>
+                            <span class="date">Aug2024</span>
+                        </div>
+                        
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <div>
+                                <h3>financial Accounting and Analysics 
+                                <h4>IIBM</h4>
+                            </div>
+                            <span class="date">Dec2024</span>
+                        </div>
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <div>
+                                <h3>Digital Marketing fundamental 
+                                <h4>IIDM</h4>
+                            </div>
+                            <span class="date">Mar2025</span>
+                        </div>
+                        </div>
+                            <div>
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <div>
+                                <h3>Human Resources Management</h3>
+                                <h4>Great Learning</h4>
+                            </div>
+                            <span class="date">Aug2024</span>
+                        </div>
+                                                </div>
+                            <div>
+                    <div class="resume-item">
+                        <div class="resume-item-header">
+                            <div>
+                               <h4>More Certification</h4>
+                         <h3>"Successfully completed over 25 certification courses to enhance my skills and broaden my professional knowledge across various domains."</h3>
+  
+                    </div>
+                </div>
+                
+                          
+                          
+                           
+            
+
+             </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Vansh Jaiswal</h3>
+                    <p>A passionate professional dedicated to delivering exceptional results through expertise in [your field]. Available for freelance projects and full-time opportunities.</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/hrvanshjaiswal?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/shushant0088?t=icb0kTSXwWvSdP3qRo-PkQ&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/share/157grLai1hM/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="#resume"><i class="fas fa-chevron-right"></i> Resume</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Unnao Uttar Pardesh</a></li>
+                        <li><a href="mailto:your.email@gmail.com"><i class="fas fa-envelope"></i> mr.vanshjaiswal008@gmail.com</a></li>
+                        <li><a href="tel:+91[Your Phone Number]"><i class="fas fa-phone"></i> +91 8960416293</a></li>
+                        <li><a href="https://www.linkedin.com/in/hrvanshjaiswal?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></li>
+                        <li><a href="[Your Naukri Profile URL]" target="_blank"><i class="fas fa-briefcase"></i> Naukri Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Vansh Jaiswal. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Edit Button -->
+    <div class="edit-mode">
+        <div class="edit-btn" id="editBtn">
+            <i class="fas fa-pen"></i>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="edit-modal" id="editModal">
+        <div class="edit-modal-content">
+            <span class="edit-close" id="editClose">&times;</span>
+            <h2 style="margin-bottom: 20px;">Customize Your Portfolio</h2>
+            
+            <div class="edit-tabs">
+                <div class="edit-tab active" data-tab="personal">Personal Info</div>
+                <div class="edit-tab" data-tab="skills">Skills</div>
+                <div class="edit-tab" data-tab="experience">Experience</div>
+                <div class="edit-tab" data-tab="social">Social Links</div>
+            </div>
+            
+            <div class="edit-tab-content active" id="personal-tab">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" class="form-control" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label>Professional Title</label>
+                    <input type="text" class="form-control" placeholder="E.g. Web Developer, Designer">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="text" class="form-control" placeholder="+91 [Your Phone Number]">
+                </div>
+                <div class="form-group">
+                    <label>Address</label>
+                    <textarea class="form-control" rows="2" placeholder="Your full address"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Brief Introduction</label>
+                    <textarea class="form-control" rows="4" placeholder="A short bio about yourself"></textarea>
+                </div>
+                <button class="btn btn-primary">Save Changes</button>
+            </div>
+            
+            <div class="edit-tab-content" id="skills-tab">
+                <div class="form-group">
+                    <label>Skill 1</label>
+                    <div class="form-control" style="padding: 0; background: transparent;">
+                        <input type="text" placeholder="Skill Name" style="width: 30%; padding: 12px 15px; border: none;">
+                        <span style="padding: 12px 15px;">-</span>
+                        <input type="range" min="0" max="100" value="80" style="width: 60%; padding: 12px 0;">
+                        <span style="padding: 12px 15px;">80%</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Skill 2</label>
+                    <div class="form-control" style="padding: 0; background: transparent;">
+                        <input type="text" placeholder="Skill Name" style="width: 30%; padding: 12px 15px; border: none;">
+                        <span style="padding: 12px 15px;">-</span>
+                        <input type="range" min="0" max="100" value="80" style="width: 60%; padding: 12px 0;">
+                        <span style="padding: 12px 15px;">80%</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary" style="margin-top: 20px;">Save Changes</button>
+            </div>
+            
+            <div class="edit-tab-content" id="experience-tab">
+                <div class="form-group">
+                    <label>Education</label>
+                    <textarea class="form-control" rows="6" placeholder="Enter your educational background"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Work Experience</label>
+                    <textarea class="form-control" rows="6" placeholder="Enter your work experience"></textarea>
+                </div>
+                <button class="btn btn-primary">Save Changes</button>
+            </div>
+            
+            <div class="edit-tab-content" id="social-tab">
+                <div class="form-group">
+                    <label>LinkedIn URL</label>
+                    <input type="url" class="form-control" placeholder="https://linkedin.com/in/yourprofile">
+                </div>
+                <div class="form-group">
+                    <label>Naukri Profile URL</label>
+                    <input type="url" class="form-control" placeholder="https://naukri.com/yourprofile">
+                </div>
+                <div class="form-group">
+                    <label>GitHub URL</label>
+                    <input type="url" class="form-control" placeholder="https://github.com/yourusername">
+                </div>
+                <div class="form-group">
+                    <label>Other Social Links</label>
+                    <textarea class="form-control" rows="2" placeholder="Other social media profiles (one per line)"></textarea>
+                </div>
+                <button class="btn btn-primary">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Navigation
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.querySelector('.nav-links').classList.remove('show');
+            });
+        });
+
+        // Update year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Edit Modal functionality
+        const editBtn = document.getElementById('editBtn');
+        const editModal = document.getElementById('editModal');
+        const editClose = document.getElementById('editClose');
+        const editTabs = document.querySelectorAll('.edit-tab');
+        
+        editBtn.addEventListener('click', function() {
+            editModal.style.display = 'flex';
+        });
+        
+        editClose.addEventListener('click', function() {
+            editModal.style.display = 'none';
+        });
+        
+        editTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs and contents
+                document.querySelectorAll('.edit-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.edit-tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Show corresponding content
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId + '-tab').classList.add('active');
+            });
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            if (e.target === editModal) {
+                editModal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
