@@ -1041,66 +1041,181 @@
     <!-- Resume Section -->
     <section class="section" id="resume">
         <div class="container">
+            <style>
+                /* Education card animations & micro-interactions */
+                .resume-col-title { color: var(--dark-color); margin-bottom: 8px; font-weight: 700;}
+                .edu-grid { margin-top:30px; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; align-items:start; }
+
+                .edu-card {
+                    background:#fff;
+                    padding:18px;
+                    border-radius:12px;
+                    box-shadow:0 10px 30px rgba(2,6,23,0.06);
+                    border:1px solid rgba(59,130,246,0.06);
+                    transition: transform .42s cubic-bezier(.2,.9,.2,1), box-shadow .42s, border-color .28s;
+                    transform-origin: center;
+                    overflow: hidden;
+                    position: relative;
+                    will-change: transform, opacity;
+                    opacity: 0;
+                    transform: translateY(20px) scale(.995);
+                }
+
+                .edu-card .ribbon {
+                    position:absolute;
+                    top:12px;
+                    right:-36px;
+                    background: linear-gradient(90deg, rgba(59,130,246,1), rgba(37,99,235,1));
+                    color:white;
+                    padding:6px 60px;
+                    transform: rotate(30deg);
+                    font-weight:700;
+                    font-size:.75rem;
+                    box-shadow:0 6px 18px rgba(37,99,235,0.12);
+                }
+
+                .edu-card h4 { margin:0 0 10px; font-size:1rem; color:var(--dark-color); }
+                .edu-card .meta { color: #6b7280; font-size:.9rem; margin-bottom:12px; display:block; }
+                .edu-card a { color:var(--primary-color); font-weight:600; text-decoration:none; }
+
+                .edu-card:hover {
+                    transform: translateY(-10px) scale(1.02) rotate(-0.3deg);
+                    box-shadow: 0 22px 50px rgba(2,6,23,0.12);
+                    border-color: rgba(59,130,246,0.18);
+                }
+
+                /* subtle inner accent line */
+                .edu-card::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    width: 6px;
+                    border-top-left-radius: 12px;
+                    border-bottom-left-radius: 12px;
+                    background: linear-gradient(180deg, rgba(59,130,246,0.95), rgba(245,158,11,0.95));
+                    opacity: 0.06;
+                    transition: opacity .3s;
+                }
+                .edu-card:hover::before { opacity: 0.18; }
+
+                /* fade up animation */
+                @keyframes fadeUp {
+                    to { opacity:1; transform: none; }
+                }
+
+                /* PROFESSIONAL EXPERIENCE: animated cards */
+                .exp-wrap { margin-top: 34px; }
+                .exp-title { font-weight:700; color:var(--dark-color); margin: 8px 0 14px; }
+                .exp-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; align-items:start; }
+                .exp-card {
+                    background:#fff;
+                    padding:16px;
+                    border-radius:12px;
+                    border:1px solid rgba(17,24,39,0.04);
+                    box-shadow: 0 8px 26px rgba(2,6,23,0.04);
+                    transition: transform .36s cubic-bezier(.2,.9,.2,1), box-shadow .36s, border-color .24s;
+                    will-change: transform, opacity;
+                    opacity:0;
+                    transform: translateY(18px) scale(.996);
+                    overflow:hidden;
+                }
+                .exp-card h4 { margin:0 0 8px; font-size:1rem; color:var(--dark-color); }
+                .exp-card .role-meta { color:#6b7280; font-size:.88rem; margin-bottom:10px; display:block; }
+                .exp-card p { color:var(--gray-medium); font-size:.95rem; margin:0 0 12px; }
+
+                .exp-card::after {
+                    content: "";
+                    position:absolute;
+                    left: 12px;
+                    bottom: 12px;
+                    width:36px;
+                    height:36px;
+                    border-radius:8px;
+                    background: linear-gradient(135deg, rgba(59,130,246,0.12), rgba(245,158,11,0.06));
+                    filter: blur(6px);
+                    z-index:0;
+                    pointer-events:none;
+                }
+
+                .exp-card:hover {
+                    transform: translateY(-8px) scale(1.02);
+                    box-shadow: 0 20px 48px rgba(2,6,23,0.12);
+                    border-color: rgba(59,130,246,0.12);
+                }
+
+                /* staggered slide-in for experience cards */
+                @keyframes slideIn {
+                    to { opacity:1; transform: none; }
+                }
+
+                /* responsive tweaks */
+                @media (max-width:420px) {
+                    .edu-card .ribbon { display:none; }
+                }
+            </style>
+
             <div class="section-title">
                 <p>My Qualifications in</p>
                 <h2> Education & Experience </h2>
             </div>
 
-            <div class="resume-container">
+            <div class="resume-container" style="gap:34px;">
                 <div class="resume-col">
                     <h3 class="resume-col-title">Education</h3>
 
-
-                    <div style="margin-top:30px;">
-                        <div
-                            style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;align-items:start;">
-
-                            <div
-                                style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                                <h4 style="margin:0 0 8px;font-size:1rem;">Bachelor's of Business Administration</h4>
-                                <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Chatrapati Sahuji Maharaj
-                                    University — July 2023 - Present</div>
-                                <a href="https://csjmu.ac.in/" target="_blank" rel="noopener"
-                                    style="color:var(--primary-color);font-weight:600">Visit University Website</a>
-                            </div>
-
-                            <div
-                                style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                                <h4 style="margin:0 0 8px;font-size:1rem;">Intermediate (PCM)</h4>
-                                <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Guru nanak Public Inter
-                                    College — July 2022 - July 2023</div>
-                                <a href="http://www.gurunanakpublicschoolunnao.in/" target="_blank" rel="noopener"
-                                    style="color:var(--primary-color);font-weight:600">Visit School Website</a>
-                            </div>
-
-                            <div
-                                style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                                <h4 style="margin:0 0 8px;font-size:1rem;">High School</h4>
-                                <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Master Mind Public High
-                                    School — July 2020 - July 2021</div>
-                                <a href="http://www.mastermindschoolunnao.com/" target="_blank" rel="noopener"
-                                    style="color:var(--primary-color);font-weight:600">Visit School Website</a>
-                            </div>
-
-                            <div
-                                style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                                <h4 style="margin:0 0 8px;font-size:1rem;">3rd - 9th Standard</h4>
-                                <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Master Mind Public High
-                                    School — July 2013 - July 2020</div>
-                                <a href="http://www.mastermindschoolunnao.com/" target="_blank" rel="noopener"
-                                    style="color:var(--primary-color);font-weight:600">Visit School Website</a>
-                            </div>
-
-                            <div
-                                style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                                <h4 style="margin:0 0 8px;font-size:1rem;">1st & 2nd Standard</h4>
-                                <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Vidhya Mandir Sishu Sadan
-                                    Inter College — July 2011 - July 2012</div>
-                                <a href="http://www.vmssunnao.edu.in/" target="_blank" rel="noopener"
-                                    style="color:var(--primary-color);font-weight:600">Visit School Website</a>
-                            </div>
+                    <div class="edu-grid" aria-live="polite">
+                        <div class="edu-card" style="animation:fadeUp .56s ease forwards; animation-delay:0s;">
+                            <div class="ribbon" aria-hidden="true">Ongoing</div>
+                            <h4>Bachelor's of Business Administration</h4>
+                            <span class="meta">Chatrapati Sahuji Maharaj University — July 2023 - Present</span>
+                            <p style="color:var(--gray-medium);margin:0 0 12px;font-size:.95rem;">
+                                Focused on management fundamentals, operations and organizational behaviour.
+                            </p>
+                            <a href="https://csjmu.ac.in/" target="_blank" rel="noopener">Visit University Website</a>
                         </div>
 
+                        <div class="edu-card" style="animation:fadeUp .56s ease forwards; animation-delay:.06s;">
+                            <div class="ribbon" aria-hidden="true">Completed</div>
+                            <h4>Intermediate (PCM)</h4>
+                            <span class="meta">Guru Nanak Public Inter College — July 2022 - July 2023</span>
+                            <p style="color:var(--gray-medium);margin:0 0 12px;font-size:.95rem;">
+                                Science stream with emphasis on problem solving and analytical thinking.
+                            </p>
+                            <a href="http://www.gurunanakpublicschoolunnao.in/" target="_blank" rel="noopener">Visit School Website</a>
+                        </div>
+
+                        <div class="edu-card" style="animation:fadeUp .56s ease forwards; animation-delay:.12s;">
+                            <div class="ribbon" aria-hidden="true">Completed</div>
+                            <h4>High School</h4>
+                            <span class="meta">Master Mind Public High School — July 2020 - July 2021</span>
+                            <p style="color:var(--gray-medium);margin:0 0 12px;font-size:.95rem;">
+                                Built foundational skills in teamwork, communication and academics.
+                            </p>
+                            <a href="http://www.mastermindschoolunnao.com/" target="_blank" rel="noopener">Visit School Website</a>
+                        </div>
+
+                        <div class="edu-card" style="animation:fadeUp .56s ease forwards; animation-delay:.18s;">
+                            <div class="ribbon" aria-hidden="true">Completed</div>
+                            <h4>3rd - 9th Standard</h4>
+                            <span class="meta">Master Mind Public High School — July 2013 - July 2020</span>
+                            <p style="color:var(--gray-medium);margin:0 0 12px;font-size:.95rem;">
+                                Long-term development of study habits, extra-curricular and leadership activities.
+                            </p>
+                            <a href="http://www.mastermindschoolunnao.com/" target="_blank" rel="noopener">Visit School Website</a>
+                        </div>
+
+                        <div class="edu-card" style="animation:fadeUp .56s ease forwards; animation-delay:.24s;">
+                            <div class="ribbon" aria-hidden="true">Completed</div>
+                            <h4>1st &amp; 2nd Standard</h4>
+                            <span class="meta">Vidhya Mandir Sishu Sadan Inter College — July 2011 - July 2012</span>
+                            <p style="color:var(--gray-medium);margin:0 0 12px;font-size:.95rem;">
+                                Early education and foundational social skills.
+                            </p>
+                            <a href="http://www.vmssunnao.edu.in/" target="_blank" rel="noopener">Visit School Website</a>
+                        </div>
+                    </div>
                         <div class="resume-item">
                             <div class="resume-item-header">
                                 <section class="section" id="re6sume">
@@ -1116,9 +1231,11 @@
                                                 style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;align-items:start;">
 
                                                 <!-- Card template -->
-                                                <div style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;"
+                                                <div class="edu-card"
+                                                    style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;animation:fadeUp .56s ease forwards;animation-delay:0s;"
                                                     onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.12)';"
                                                     onmouseout="this.style.transform='';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.06)';">
+                                                    <div class="ribbon" aria-hidden="true">Ongoing</div>
                                                     <h4 style="margin:0 0 8px;font-size:1rem;">Accountant </h4>
                                                     <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">
                                                          Arora Resort and Arora Groups — NOv2025- Present</div>
@@ -1137,9 +1254,11 @@ regulations.</p>
                                                         <input id="cert-1" type="file" style="display:none" />
                                                          </div>
                                                 </div>
-                                                <div style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;"
+                                                <div class="edu-card"
+                                                    style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;animation:fadeUp .56s ease forwards;animation-delay:.04s;"
                                                     onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.12)';"
                                                     onmouseout="this.style.transform='';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.06)';">
+                                                    <div class="ribbon" aria-hidden="true">Completed</div>
                                                     <h4 style="margin:0 0 8px;font-size:1rem;">Hub Assistant</h4>
                                                     <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Ekart
                                                         / Flipkart — May 2023 - Jul 2023</div>
@@ -1164,9 +1283,11 @@ regulations.</p>
                                                     </div>
                                                 </div>
 
-                                                <div style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;"
+                                                <div class="edu-card"
+                                                    style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;animation:fadeUp .56s ease forwards;animation-delay:.08s;"
                                                     onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.12)';"
                                                     onmouseout="this.style.transform='';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.06)';">
+                                                    <div class="ribbon" aria-hidden="true">Completed</div>
                                                     <h4 style="margin:0 0 8px;font-size:1rem;">Senior HR Manager Intern
                                                     </h4>
                                                     <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">TEN:
@@ -1189,9 +1310,11 @@ regulations.</p>
                                                     </div>
                                                 </div>
 
-                                                <div style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;"
+                                                <div class="edu-card"
+                                                    style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;animation:fadeUp .56s ease forwards;animation-delay:.12s;"
                                                     onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.12)';"
                                                     onmouseout="this.style.transform='';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.06)';">
+                                                    <div class="ribbon" aria-hidden="true">Completed</div>
                                                     <h4 style="margin:0 0 8px;font-size:1rem;">HR Team Leader Intern
                                                     </h4>
                                                     <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">
@@ -1204,8 +1327,7 @@ regulations.</p>
                                                             target="_blank" rel="noopener"
                                                             style="padding:8px 12px;border-radius:8px;border:1px solid #3b82f6;color:var(--primary-color);font-weight:600;text-decoration:none;">Company
                                                             Website</a>
-                                                        <label for="offer-3" <a
-                                                            href="https://in.linkedin.com/in/hrvanshjaiswal?trk=people-guest_people_search-card"
+                                                        <label for="offer-3"
                                                             style="padding:8px 12px;border-radius:8px;background:#eef2ff;color:#1e3a8a;cursor:pointer;font-weight:600;">
                                                             Offer Letter</label>
                                                         <input id="offer-3" type="file" style="display:none" />
@@ -1216,9 +1338,11 @@ regulations.</p>
                                                     </div>
                                                 </div>
 
-                                                <div style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;"
+                                                <div class="edu-card"
+                                                    style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;animation:fadeUp .56s ease forwards;animation-delay:.16s;"
                                                     onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.12)';"
                                                     onmouseout="this.style.transform='';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.06)';">
+                                                    <div class="ribbon" aria-hidden="true">Completed</div>
                                                     <h4 style="margin:0 0 8px;font-size:1rem;">Digital Marketing Intern
                                                     </h4>
                                                     <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">TCS —
@@ -1241,9 +1365,11 @@ regulations.</p>
                                                     </div>
                                                 </div>
 
-                                                <div style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;"
+                                                <div class="edu-card"
+                                                    style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;animation:fadeUp .56s ease forwards;animation-delay:.20s;"
                                                     onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.12)';"
                                                     onmouseout="this.style.transform='';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.06)';">
+                                                    <div class="ribbon" aria-hidden="true">Completed</div>
                                                     <h4 style="margin:0 0 8px;font-size:1rem;">Logistics Coordinator
                                                     </h4>
                                                     <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">
@@ -1267,9 +1393,11 @@ regulations.</p>
                                                     </div>
                                                 </div>
 
-                                                <div style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;"
+                                                <div class="edu-card"
+                                                    style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;animation:fadeUp .56s ease forwards;animation-delay:.24s;"
                                                     onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.12)';"
                                                     onmouseout="this.style.transform='';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.06)';">
+                                                    <div class="ribbon" aria-hidden="true">Completed</div>
                                                     <h4 style="margin:0 0 8px;font-size:1rem;">Management Trainee</h4>
                                                     <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">
                                                         Aditya Birla Group — Jul 2022 - Dec 2022</div>
@@ -1292,9 +1420,11 @@ regulations.</p>
                                                     </div>
                                                 </div>
 
-                                                <div style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;"
+                                                <div class="edu-card"
+                                                    style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;animation:fadeUp .56s ease forwards;animation-delay:.28s;"
                                                     onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.12)';"
                                                     onmouseout="this.style.transform='';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.06)';">
+                                                    <div class="ribbon" aria-hidden="true">Completed</div>
                                                     <h4 style="margin:0 0 8px;font-size:1rem;">HR Executive (Intern)
                                                     </h4>
                                                     <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">
@@ -1317,9 +1447,11 @@ regulations.</p>
                                                     </div>
                                                 </div>
 
-                                                <div style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;"
+                                                <div class="edu-card"
+                                                    style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;animation:fadeUp .56s ease forwards;animation-delay:.32s;"
                                                     onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.12)';"
                                                     onmouseout="this.style.transform='';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.06)';">
+                                                    <div class="ribbon" aria-hidden="true">Completed</div>
                                                     <h4 style="margin:0 0 8px;font-size:1rem;">Project Coordinator</h4>
                                                     <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">
                                                         Deloitte — Nov 2023 - Feb 2024</div>
@@ -1342,9 +1474,11 @@ regulations.</p>
                                                     </div>
                                                 </div>
 
-                                                <div style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;"
+                                                <div class="edu-card"
+                                                    style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;animation:fadeUp .56s ease forwards;animation-delay:.36s;"
                                                     onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.12)';"
                                                     onmouseout="this.style.transform='';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.06)';">
+                                                    <div class="ribbon" aria-hidden="true">Completed</div>
                                                     <h4 style="margin:0 0 8px;font-size:1rem;">Business Analyst Intern
                                                     </h4>
                                                     <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">IBM —
@@ -1367,9 +1501,11 @@ regulations.</p>
                                                     </div>
                                                 </div>
 
-                                                <div style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;"
+                                                <div class="edu-card"
+                                                    style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;animation:fadeUp .56s ease forwards;animation-delay:.40s;"
                                                     onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.12)';"
                                                     onmouseout="this.style.transform='';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.06)';">
+                                                    <div class="ribbon" aria-hidden="true">Completed</div>
                                                     <h4 style="margin:0 0 8px;font-size:1rem;">Customer Success Intern
                                                     </h4>
                                                     <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">
@@ -1393,9 +1529,11 @@ regulations.</p>
                                                     </div>
                                                 </div>
 
-                                                <div style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;"
+                                                <div class="edu-card"
+                                                    style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;animation:fadeUp .56s ease forwards;animation-delay:.44s;"
                                                     onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.12)';"
                                                     onmouseout="this.style.transform='';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.06)';">
+                                                    <div class="ribbon" aria-hidden="true">Completed</div>
                                                     <h4 style="margin:0 0 8px;font-size:1rem;">Sales Intern</h4>
                                                     <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">
                                                         Infosys — Jan 2023 - Apr 2023</div>
@@ -1417,9 +1555,11 @@ regulations.</p>
                                                     </div>
                                                 </div>
 
-                                                <div style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;"
+                                                <div class="edu-card"
+                                                    style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;animation:fadeUp .56s ease forwards;animation-delay:.48s;"
                                                     onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.12)';"
                                                     onmouseout="this.style.transform='';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.06)';">
+                                                    <div class="ribbon" aria-hidden="true">Completed</div>
                                                     <h4 style="margin:0 0 8px;font-size:1rem;">HR Intern</h4>
                                                     <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Wipro
                                                         — May 2023 - Aug 2023</div>
@@ -1441,9 +1581,11 @@ regulations.</p>
                                                     </div>
                                                 </div>
 
-                                                <div style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;"
+                                                <div class="edu-card"
+                                                    style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;animation:fadeUp .56s ease forwards;animation-delay:.52s;"
                                                     onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.12)';"
                                                     onmouseout="this.style.transform='';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.06)';">
+                                                    <div class="ribbon" aria-hidden="true">Completed</div>
                                                     <h4 style="margin:0 0 8px;font-size:1rem;">Operations Lead</h4>
                                                     <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Blue
                                                         Dart — Aug 2022 - Nov 2022</div>
@@ -1466,9 +1608,11 @@ regulations.</p>
                                                     </div>
                                                 </div>
 
-                                                <div style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;"
+                                                <div class="edu-card"
+                                                    style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;animation:fadeUp .56s ease forwards;animation-delay:.56s;"
                                                     onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.12)';"
                                                     onmouseout="this.style.transform='';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.06)';">
+                                                    <div class="ribbon" aria-hidden="true">Completed</div>
                                                     <h4 style="margin:0 0 8px;font-size:1rem;">Store Supervisor</h4>
                                                     <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">
                                                         Future Retail (Big Bazaar) — Jun 2021 - Dec 2021</div>
@@ -1491,9 +1635,11 @@ regulations.</p>
                                                     </div>
                                                 </div>
 
-                                                <div style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;"
+                                                <div class="edu-card"
+                                                    style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;animation:fadeUp .56s ease forwards;animation-delay:.60s;"
                                                     onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.12)';"
                                                     onmouseout="this.style.transform='';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.06)';">
+                                                    <div class="ribbon" aria-hidden="true">Completed</div>
                                                     <h4 style="margin:0 0 8px;font-size:1rem;">Assistant Manager
                                                         (Intern)</h4>
                                                     <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">
@@ -1516,9 +1662,11 @@ regulations.</p>
                                                     </div>
                                                 </div>
 
-                                                <div style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;"
+                                                <div class="edu-card"
+                                                    style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .35s ease,box-shadow .35s ease;animation:fadeUp .56s ease forwards;animation-delay:.64s;"
                                                     onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 12px 30px rgba(0,0,0,0.12)';"
                                                     onmouseout="this.style.transform='';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.06)';">
+                                                    <div class="ribbon" aria-hidden="true">Completed</div>
                                                     <h4 style="margin:0 0 8px;font-size:1rem;">Operations Intern</h4>
                                                     <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">
                                                         Accenture — May 2023 - Aug 2023</div>
@@ -2383,6 +2531,7 @@ regulations.</p>
             </div>
         </div>
     </footer>
+
 
 
 
