@@ -761,13 +761,6 @@
             </nav>
         </div>
     </header>
-    </style>
-    <div class="hamburger">
-        <i class="fas fa-bars"></i>
-    </div>
-    </nav>
-    </div>
-    </header>
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
@@ -809,7 +802,7 @@
         <div class="container">
             <div class="section-title">
                 <p>Get To Know More</p>
-                <h2>About Me</h2>
+                <h2><center><i class="fas fa-user"></i> About Me</center></h2>
             </div>
 
             <div class="about-text">
@@ -840,10 +833,20 @@
                         <span><strong>Naukri:</strong> Mr.Vansh Jaiswal</span>
                     </div>
                 </div>
+<pre>
 
+
+
+
+
+</pre>
                 <div class="skills">
-                    <h3> Skills</h3>
-                    <p style="color:var(--gray-medium);margin:8px 0 16px;max-width:720px;">
+                    <h1> <big><center> <i class="fas fa-tools"></i> Skills</center></big></h1><pre>
+
+
+
+                    </pre>
+                    <p style="color:var(--gray-medium);margin:20px 0 16px;max-width:720px;">
                     <div
                         style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;align-items:start;">
                         <!-- Skill Card Template -->
@@ -1158,7 +1161,7 @@
 
             <div class="section-title">
                 <p>My Qualifications in</p>
-                <h2> Education & Experience </h2>
+                <h2> <center><i class="fas fa-graduation-cap"></i> Education </center></h2>
             </div>
 
             <div class="resume-container" style="gap:34px;">
@@ -1221,8 +1224,8 @@
                                 <section class="section" id="re6sume">
                                     <div class="container">
                                         <div class="section-title">
-                                            <p>My Experience in</p>
-                                            <h2> Experience </h2>
+                                            
+                                            <h2> <center><i class="fas fa-briefcase"></i> Experience </center></h2>
                                         </div>
 
                                         <!-- Experience grid (cards similar to certificates) -->
@@ -1574,7 +1577,7 @@ regulations.</p>
         <div class="container">
             <div class="section-title">
                 <p>Get In Touch</p>
-                <h2>Contact Me</h2>
+                <h2> <center><i class="fas fa-envelope"></i> Contact Me</center></h2>
             </div>
 
             <style>
@@ -1748,7 +1751,7 @@ regulations.</p>
                     margin-top: 8px;
                 }
             </style>
-
+<center>
             <div class="contact-cards-grid" style="justify-items:center;">
                 <!-- Box 1: Quick Connect -->
                 <div class="contact-box animate-in" aria-label="Quick contact" style="max-width:420px; width:100%;">
@@ -1770,571 +1773,783 @@ regulations.</p>
                             location</a>
                     </div>
                 </div>
-            </div>
+            </div> <pre>
+                
+            </pre></center>
     </section>
     <!-- Resume Section -->
     <section class="section" id="re5sume">
         <div class="container">
             <div class="section-title">
                 <p>My Qualifications</p>
-                <h2>Certificate </h2>
+                <h2> <center><i class="fas fa-certificate"></i> Certifications </center></h2>
                 <link rel="stylesheet" href="styles.css">
             </div>
-            <div style="margin-top:30px;">
-                <div
-                    style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;align-items:start;">
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Google IT Support Professional Certificate</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Google — Aug 2024</div>
-                        <a href="https://grow.google/certificates/it-support/" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
+            <style>
+                .certificate-hub {
+                    margin-top: 32px;
+                    background: linear-gradient(145deg, #ffffff, #f8fbff);
+                    border-radius: 28px;
+                    padding: 32px;
+                    border: 1px solid rgba(59, 130, 246, 0.15);
+                    box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
+                }
+
+                .certificate-hub__intro {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 16px;
+                    margin-bottom: 28px;
+                }
+
+                .certificate-hub__intro h3 {
+                    margin: 6px 0;
+                    font-size: 1.35rem;
+                    color: var(--primary-dark, #0f172a);
+                }
+
+                .certificate-hub__intro p {
+                    margin: 0;
+                    color: #64748b;
+                    max-width: 560px;
+                }
+
+                .certificate-hub__summary {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 6px;
+                    font-weight: 600;
+                    color: #0f172a;
+                }
+
+                .verify-pill {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 6px;
+                    border-radius: 999px;
+                    padding: 6px 14px;
+                    background: rgba(34, 197, 94, 0.12);
+                    color: #15803d;
+                    font-size: 0.9rem;
+                }
+
+                .certificate-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                    gap: 18px;
+                }
+
+                .certificate-card {
+                    background: #fff;
+                    border-radius: 18px;
+                    padding: 18px;
+                    border: 1px solid #e2e8f0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    min-height: 170px;
+                    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+                }
+
+                .certificate-card:hover {
+                    transform: translateY(-4px);
+                    border-color: rgba(59, 130, 246, 0.4);
+                    box-shadow: 0 15px 26px rgba(15, 23, 42, 0.08);
+                }
+
+                .certificate-meta {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 0.85rem;
+                    color: #475569;
+                    gap: 8px;
+                }
+
+                .certificate-card h4 {
+                    margin: 4px 0 0;
+                    font-size: 1rem;
+                    color: #0f172a;
+                    line-height: 1.35;
+                }
+
+                .certificate-card a {
+                    margin-top: auto;
+                    font-weight: 600;
+                    color: var(--primary-color);
+                    text-decoration: none;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 6px;
+                }
+
+                .certificate-card a::after {
+                    content: '\f14c';
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    font-size: 0.8rem;
+                }
+            </style>
+
+            <div class="certificate-hub" aria-label="Verified certificates">
+                <div class="certificate-hub__intro">
+                    <div>
+                        <p class="verify-pill" style="background:rgba(59,130,246,.12);color:var(--primary-color);">
+                            <i class="fas fa-id-card"></i> Vansh Jaiswal 
+                        </p>
+                        </div>
+                    <div class="certificate-hub__summary">
+                        
+                        <span style="color:#475569;font-size:0.9rem;">40+ multi-cloud • product • leadership badges</span>
+                    </div>
                     </div>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Google Data Analytics Professional Certificate</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Google — May 2024</div>
-                        <a href="https://grow.google/certificates/data-analytics/" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
+                <div class="certificate-grid">
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Google</span>
+                            <span>Aug 2024</span>
                     </div>
+                        <h4>Google IT Support Professional Certificate</h4>
+                        <a href="https://grow.google/certificates/it-support/" target="_blank" rel="noopener">View
+                            certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Google Project Management Professional Certificate
-                        </h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Google — Mar 2024</div>
-                        <a href="https://grow.google/certificates/project-management/" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Google</span>
+                            <span>May 2024</span>
                     </div>
+                        <h4>Google Data Analytics Professional Certificate</h4>
+                        <a href="https://grow.google/certificates/data-analytics/" target="_blank" rel="noopener">View
+                            certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Google UX Design Professional Certificate</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Google — Jan 2024</div>
-                        <a href="https://grow.google/certificates/ux-design/" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Google</span>
+                            <span>Mar 2024</span>
                     </div>
+                        <h4>Google Project Management Professional Certificate</h4>
+                        <a href="https://grow.google/certificates/project-management/" target="_blank"
+                            rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Microsoft Certified: Azure Fundamentals</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Microsoft — Sep 2023</div>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Google</span>
+                            <span>Jan 2024</span>
+                    </div>
+                        <h4>Google UX Design Professional Certificate</h4>
+                        <a href="https://grow.google/certificates/ux-design/" target="_blank" rel="noopener">View
+                            certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Microsoft</span>
+                            <span>Sep 2023</span>
+                    </div>
+                        <h4>Microsoft Certified: Azure Fundamentals</h4>
                         <a href="https://learn.microsoft.com/en-us/certifications/azure-fundamentals/" target="_blank"
-                            rel="noopener" style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
+                            rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Microsoft Power Platform Fundamentals</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Microsoft — Nov 2023</div>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Microsoft</span>
+                            <span>Nov 2023</span>
+                    </div>
+                        <h4>Microsoft Power Platform Fundamentals</h4>
                         <a href="https://learn.microsoft.com/en-us/certifications/power-platform-fundamentals/"
-                            target="_blank" rel="noopener" style="color:var(--primary-color);font-weight:600">View
-                            Certificate</a>
-                    </div>
+                            target="_blank" rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Microsoft Data Analyst Associate (Power BI)</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Microsoft — Feb 2024</div>
-                        <a href="https://learn.microsoft.com/en-us/certifications/data-analyst-associate/"
-                            target="_blank" rel="noopener" style="color:var(--primary-color);font-weight:600">View
-                            Certificate</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">AWS Certified Cloud Practitioner</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Amazon Web Services — Jul 2023
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Microsoft</span>
+                            <span>Feb 2024</span>
                         </div>
+                        <h4>Microsoft Data Analyst Associate (Power BI)</h4>
+                        <a href="https://learn.microsoft.com/en-us/certifications/data-analyst-associate/" target="_blank"
+                            rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>AWS</span>
+                            <span>Jul 2023</span>
+                    </div>
+                        <h4>AWS Certified Cloud Practitioner</h4>
                         <a href="https://aws.amazon.com/certification/certified-cloud-practitioner/" target="_blank"
-                            rel="noopener" style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
+                            rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">AWS Certified Solutions Architect – Associate</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Amazon Web Services — Oct 2023
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>AWS</span>
+                            <span>Oct 2023</span>
                         </div>
+                        <h4>AWS Certified Solutions Architect – Associate</h4>
                         <a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/"
-                            target="_blank" rel="noopener" style="color:var(--primary-color);font-weight:600">View
-                            Certificate</a>
-                    </div>
+                            target="_blank" rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">AWS Certified Developer – Associate</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Amazon Web Services — Dec 2023
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>AWS</span>
+                            <span>Dec 2023</span>
                         </div>
+                        <h4>AWS Certified Developer – Associate</h4>
                         <a href="https://aws.amazon.com/certification/certified-developer-associate/" target="_blank"
-                            rel="noopener" style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
+                            rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">AWS Certified Machine Learning – Specialty</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Amazon Web Services — Apr 2024
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>AWS</span>
+                            <span>Apr 2024</span>
                         </div>
+                        <h4>AWS Certified Machine Learning – Specialty</h4>
                         <a href="https://aws.amazon.com/certification/certified-machine-learning-specialty/"
-                            target="_blank" rel="noopener" style="color:var(--primary-color);font-weight:600">View
-                            Certificate</a>
-                    </div>
+                            target="_blank" rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">IBM Professional Certifications</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">IBM — Jun 2022</div>
-                        <a href="https://www.ibm.com/certify" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View IBM Certifications</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Cisco CCNA</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Cisco — Aug 2022</div>
-                        <a href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html"
-                            target="_blank" rel="noopener" style="color:var(--primary-color);font-weight:600">View
-                            Certificate</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Cisco CCNP Enterprise</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Cisco — Nov 2022</div>
-                        <a href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/professional/ccnp-enterprise.html"
-                            target="_blank" rel="noopener" style="color:var(--primary-color);font-weight:600">View
-                            Certificate</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Oracle Certification Hub</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Oracle — May 2022</div>
-                        <a href="https://education.oracle.com" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Oracle Certifications</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Salesforce Administrator</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Salesforce — Jun 2023</div>
-                        <a href="https://trailhead.salesforce.com/credentials/administrator" target="_blank"
-                            rel="noopener" style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Salesforce Platform Developer I</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Salesforce — Sep 2023</div>
-                        <a href="https://trailhead.salesforce.com/credentials/platformdeveloperI" target="_blank"
-                            rel="noopener" style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Adobe Certified Professional</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Adobe — Apr 2023</div>
-                        <a href="https://learning.adobe.com/certification.html" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">SAP Certified Associate</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">SAP — Jul 2022</div>
-                        <a href="https://training.sap.com/certification/" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Tableau Desktop Specialist</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Tableau — Oct 2023</div>
-                        <a href="https://www.tableau.com/support/certification" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Splunk Core Certified User</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Splunk — Feb 2024</div>
-                        <a href="https://www.splunk.com/en_us/training/certification.html" target="_blank"
-                            rel="noopener" style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Red Hat Certified System Administrator (RHCSA)</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Red Hat — Jun 2023</div>
-                        <a href="https://www.redhat.com/en/services/training-and-certification" target="_blank"
-                            rel="noopener" style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">VMware Certified Professional (VCP)</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">VMware — Aug 2023</div>
-                        <a href="https://www.vmware.com/education-services/certification.html" target="_blank"
-                            rel="noopener" style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Palo Alto Networks Certification</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Palo Alto Networks — Mar 2024
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>IBM</span>
+                            <span>Jun 2023</span>
                         </div>
-                        <a href="https://www.paloaltonetworks.com/services/education/certification" target="_blank"
-                            rel="noopener" style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
+                        <h4>IBM Professional Certifications</h4>
+                        <a href="https://www.ibm.com/certify" target="_blank" rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Fortinet NSE Certification</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Fortinet — Nov 2023</div>
-                        <a href="https://www.fortinet.com/support-and-training/training/certification" target="_blank"
-                            rel="noopener" style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Cisco</span>
+                            <span>Aug 2023</span>
+                        </div>
+                        <h4>Cisco CCNA</h4>
+                        <a href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html"
+                            target="_blank" rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Juniper Networks Certification Program</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Juniper — Jul 2022</div>
-                        <a href="https://www.juniper.net/us/en/training/certification/" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Cisco</span>
+                            <span>Nov 2023</span>
+                        </div>
+                        <h4>Cisco CCNP Enterprise</h4>
+                        <a href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/professional/ccnp-enterprise.html"
+                            target="_blank" rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">PMI: CAPM (Certified Associate in Project Management)
-                        </h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">PMI — Jan 2024</div>
-                        <a href="https://www.pmi.org/certifications/certified-associate-capm" target="_blank"
-                            rel="noopener" style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Oracle</span>
+                            <span>May 2023</span>
+                        </div>
+                        <h4>Oracle Certification Hub</h4>
+                        <a href="https://education.oracle.com" target="_blank" rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">PMI: PMP (Project Management Professional)</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">PMI — Sep 2023</div>
-                        <a href="https://www.pmi.org/certifications/project-management-pmp" target="_blank"
-                            rel="noopener" style="color:var(--primary-color);font-weight:600">View Certificate</a>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Salesforce</span>
+                            <span>Jun 2023</span>
                     </div>
+                        <h4>Salesforce Administrator</h4>
+                        <a href="https://trailhead.salesforce.com/credentials/administrator" target="_blank"
+                            rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">HubSpot Inbound Certification</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">HubSpot — May 2023</div>
-                        <a href="https://academy.hubspot.com/courses/inbound" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Salesforce</span>
+                            <span>Sep 2023</span>
                     </div>
+                        <h4>Salesforce Platform Developer I</h4>
+                        <a href="https://trailhead.salesforce.com/credentials/platformdeveloperI" target="_blank"
+                            rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">HubSpot Content Marketing</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">HubSpot — Jul 2023</div>
-                        <a href="https://academy.hubspot.com/courses/content-marketing" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Adobe</span>
+                            <span>Apr 2023</span>
                     </div>
+                        <h4>Adobe Certified Professional</h4>
+                        <a href="https://learning.adobe.com/certification.html" target="_blank" rel="noopener">View
+                            certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">LinkedIn Learning Completion Certificates</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">LinkedIn — Multiple Dates</div>
-                        <a href="https://www.linkedin.com/learning/" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View LinkedIn Learning</a>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>SAP</span>
+                            <span>Jul 2023</span>
+                        </div>
+                        <h4>SAP Certified Associate</h4>
+                        <a href="https://training.sap.com/certification/" target="_blank" rel="noopener">View
+                            certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Tableau</span>
+                            <span>Oct 2023</span>
                     </div>
+                        <h4>Tableau Desktop Specialist</h4>
+                        <a href="https://www.tableau.com/support/certification" target="_blank" rel="noopener">View
+                            certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Coursera Professional Certificates (partnered with
-                            MNCs)</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Coursera — Ongoing</div>
-                        <a href="https://www.coursera.org/professional-certificates" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificates</a>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Splunk</span>
+                            <span>Feb 2024</span>
                     </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">edX Professional Certificates</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">edX — Ongoing</div>
-                        <a href="https://www.edx.org/professional-certificate" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificates</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Accenture Skills & Certifications</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Accenture — Dec 2022</div>
-                        <a href="https://www.accenture.com" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Accenture Learning</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Deloitte Learning & Certification</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Deloitte — Apr 2023</div>
-                        <a href="https://www2.deloitte.com/global/en/pages/careers/articles/careers-why-join-deloitte.html"
-                            target="_blank" rel="noopener" style="color:var(--primary-color);font-weight:600">View
-                            Deloitte Learning</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">PwC Digital & Certifications</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">PwC — Jun 2023</div>
-                        <a href="https://www.pwc.com/gx/en/services/people.html" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View PwC Learning</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">KPMG Learning & Certifications</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">KPMG — May 2023</div>
-                        <a href="https://home.kpmg/xx/en/home/services.html" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View KPMG Learning</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">EY Learning & Certifications</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">EY — Feb 2024</div>
-                        <a href="https://www.ey.com/en_gl" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View EY Learning</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Capgemini Certifications</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Capgemini — Mar 2022</div>
-                        <a href="https://www.capgemini.com" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Capgemini Learning</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Infosys Certification Programs</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Infosys — Sep 2022</div>
-                        <a href="https://www.infosys.com" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Infosys Learning</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Wipro Learning & Certifications</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Wipro — Jan 2023</div>
-                        <a href="https://www.wipro.com" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Wipro Learning</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">TCS Certification & Learning</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">TCS — Nov 2022</div>
-                        <a href="https://www.tcs.com" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View TCS Learning</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Cognizant Professional Certificates</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Cognizant — Jun 2022</div>
-                        <a href="https://www.cognizant.com" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Cognizant Learning</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">HCLTech Learning</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">HCL — Apr 2022</div>
-                        <a href="https://www.hcltech.com" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View HCL Learning</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Zoho Certification & Academy</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Zoho — Jul 2023</div>
-                        <a href="https://www.zoho.com/academy/certification.html" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Atlassian University & Certifications</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Atlassian — Oct 2023</div>
-                        <a href="https://www.atlassian.com/university/certification" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">GitHub Training & Certification</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">GitHub — Mar 2023</div>
-                        <a href="https://training.github.com/" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View GitHub Training</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Intel Professional Certifications & Training</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Intel — Aug 2022</div>
-                        <a href="https://www.intel.com/content/www/us/en/education/certification.html" target="_blank"
-                            rel="noopener" style="color:var(--primary-color);font-weight:600">View Intel
-                            Certifications</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">NVIDIA Deep Learning Institute</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">NVIDIA — Jun 2024</div>
-                        <a href="https://www.nvidia.com/en-us/deep-learning-ai/education/" target="_blank"
-                            rel="noopener" style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">SAS Certification</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">SAS — Dec 2022</div>
-                        <a href="https://www.sas.com/en_us/certification.html" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">MongoDB University Certifications</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">MongoDB — Feb 2023</div>
-                        <a href="https://university.mongodb.com/" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Elastic Training & Certification</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Elastic — Apr 2023</div>
-                        <a href="https://www.elastic.co/training/certification" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Tableau Certified Associate</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Tableau — Jan 2024</div>
-                        <a href="https://www.tableau.com/support/certification" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Splunk Enterprise Certified Admin</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Splunk — Jul 2023</div>
+                        <h4>Splunk Core Certified User</h4>
                         <a href="https://www.splunk.com/en_us/training/certification.html" target="_blank"
-                            rel="noopener" style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
+                            rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Cisco CyberOps Associate</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Cisco — May 2023</div>
-                        <a href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/cyberops-associate.html"
-                            target="_blank" rel="noopener" style="color:var(--primary-color);font-weight:600">View
-                            Certificate</a>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Red Hat</span>
+                            <span>Jun 2023</span>
                     </div>
-
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Red Hat Certified Engineer (RHCE)</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Red Hat — Nov 2023</div>
+                        <h4>Red Hat Certified System Administrator (RHCSA)</h4>
                         <a href="https://www.redhat.com/en/services/training-and-certification" target="_blank"
-                            rel="noopener" style="color:var(--primary-color);font-weight:600">View Certificate</a>
-                    </div>
+                            rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">VMware vSphere Certifications</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">VMware — Dec 2023</div>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>VMware</span>
+                            <span>Aug 2023</span>
+                    </div>
+                        <h4>VMware Certified Professional (VCP)</h4>
                         <a href="https://www.vmware.com/education-services/certification.html" target="_blank"
-                            rel="noopener" style="color:var(--primary-color);font-weight:600">View Certificate</a>
+                            rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Palo Alto</span>
+                            <span>Mar 2024</span>
+                        </div>
+                        <h4>Palo Alto Networks Certification</h4>
+                        <a href="https://www.paloaltonetworks.com/services/education/certification" target="_blank"
+                            rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Fortinet</span>
+                            <span>Nov 2023</span>
                     </div>
+                        <h4>Fortinet NSE Certification</h4>
+                        <a href="https://www.fortinet.com/support-and-training/training/certification" target="_blank"
+                            rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Microsoft Azure Data Fundamentals</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Microsoft — Aug 2023</div>
-                        <a href="https://learn.microsoft.com/en-us/certifications/" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Microsoft Certifications</a>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Juniper</span>
+                            <span>Jul 2023</span>
+                        </div>
+                        <h4>Juniper Networks Certification Program</h4>
+                        <a href="https://www.juniper.net/us/en/training/certification/" target="_blank"
+                            rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>PMI</span>
+                            <span>Jan 2024</span>
                     </div>
+                        <h4>PMI: CAPM (Certified Associate in Project Management)</h4>
+                        <a href="https://www.pmi.org/certifications/certified-associate-capm" target="_blank"
+                            rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Adobe Certified Expert (ACE)</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Adobe — Feb 2024</div>
-                        <a href="https://learning.adobe.com/certification.html" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>PMI</span>
+                            <span>Sep 2023</span>
                     </div>
+                        <h4>PMI: PMP (Project Management Professional)</h4>
+                        <a href="https://www.pmi.org/certifications/project-management-pmp" target="_blank"
+                            rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Oracle Cloud Infrastructure Certifications</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Oracle — Sep 2023</div>
-                        <a href="https://education.oracle.com" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>HubSpot</span>
+                            <span>May 2023</span>
                     </div>
+                        <h4>HubSpot Inbound Certification</h4>
+                        <a href="https://academy.hubspot.com/courses/inbound" target="_blank" rel="noopener">View
+                            certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Google Cloud Certifications</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Google Cloud — Jun 2024</div>
-                        <a href="https://cloud.google.com/certification" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>HubSpot</span>
+                            <span>Jul 2023</span>
                     </div>
+                        <h4>HubSpot Content Marketing</h4>
+                        <a href="https://academy.hubspot.com/courses/content-marketing" target="_blank"
+                            rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Salesforce Marketing Cloud Certifications</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Salesforce — May 2024</div>
-                        <a href="https://trailhead.salesforce.com" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>LinkedIn</span>
+                            <span>Multiple dates</span>
                     </div>
+                        <h4>LinkedIn Learning Completion Certificates</h4>
+                        <a href="https://www.linkedin.com/learning/" target="_blank" rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Atlassian Certified Jira Administrator</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Atlassian — Oct 2022</div>
-                        <a href="https://www.atlassian.com/university/certification" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Coursera</span>
+                            <span>July 2025 </span>
                     </div>
+                        <h4>Coursera Professional Certificates (with MNC partners)</h4>
+                        <a href="https://www.coursera.org/professional-certificates" target="_blank" rel="noopener">View
+                            certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">MongoDB Certified DBA</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">MongoDB — Jan 2023</div>
-                        <a href="https://university.mongodb.com/" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>edX</span>
+                            <span>Aug 2025</span>
                     </div>
+                        <h4>edX Professional Certificates</h4>
+                        <a href="https://www.edx.org/professional-certificate" target="_blank" rel="noopener">View
+                            certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">Elastic Certified Engineer</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">Elastic — Aug 2023</div>
-                        <a href="https://www.elastic.co/training/certification" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Accenture</span>
+                            <span>Dec 2023</span>
+                        </div>
+                        <h4>Accenture Skills & Certifications</h4>
+                        <a href="https://www.accenture.com" target="_blank" rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Deloitte</span>
+                            <span>Apr 2023</span>
                     </div>
+                        <h4>Deloitte Learning & Certification</h4>
+                        <a href="https://www2.deloitte.com/global/en/pages/careers/articles/careers-why-join-deloitte.html"
+                            target="_blank" rel="noopener">View certificate</a>
+                    </article>
 
-                    <div
-                        style="background:#fff;padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);">
-                        <h4 style="margin:0 0 8px;font-size:1rem;">GitHub Certified: GitHub Actions</h4>
-                        <div style="color:#6b7280;font-size:.9rem;margin-bottom:10px;">GitHub — Apr 2023</div>
-                        <a href="https://training.github.com/" target="_blank" rel="noopener"
-                            style="color:var(--primary-color);font-weight:600">View Certificate</a>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>PwC</span>
+                            <span>Jun 2023</span>
                     </div>
-                </div>
-            </div>
+                        <h4>PwC Digital & Certifications</h4>
+                        <a href="https://www.pwc.com/gx/en/services/people.html" target="_blank" rel="noopener">View
+                            certificate</a>
+                    </article>
 
-        </div>
-        </div>
-        <div>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>KPMG</span>
+                            <span>May 2023</span>
+                    </div>
+                        <h4>KPMG Learning & Certifications</h4>
+                        <a href="https://home.kpmg/xx/en/home/services.html" target="_blank" rel="noopener">View
+                            certificate</a>
+                    </article>
 
-            </form>
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>EY</span>
+                            <span>Feb 2024</span>
+                    </div>
+                        <h4>EY Learning & Certifications</h4>
+                        <a href="https://www.ey.com/en_gl" target="_blank" rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Capgemini</span>
+                            <span>Mar 2023</span>
+                        </div>
+                        <h4>Capgemini Certifications</h4>
+                        <a href="https://www.capgemini.com" target="_blank" rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Infosys</span>
+                            <span>Sep 2023</span>
+                        </div>
+                        <h4>Infosys Certification Programs</h4>
+                        <a href="https://www.infosys.com" target="_blank" rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Wipro</span>
+                            <span>Jan 2023</span>
+                    </div>
+                        <h4>Wipro Learning & Certifications</h4>
+                        <a href="https://www.wipro.com" target="_blank" rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>TCS</span>
+                            <span>Nov 2023</span>
+                        </div>
+                        <h4>TCS Certification & Learning</h4>
+                        <a href="https://www.tcs.com" target="_blank" rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Cognizant</span>
+                            <span>Jun 2023</span>
+                        </div>
+                        <h4>Cognizant Professional Certificates</h4>
+                        <a href="https://www.cognizant.com" target="_blank" rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>HCLTech</span>
+                            <span>Apr 2023</span>
+                        </div>
+                        <h4>HCLTech Learning</h4>
+                        <a href="https://www.hcltech.com" target="_blank" rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Zoho</span>
+                            <span>Jul 2023</span>
+                    </div>
+                        <h4>Zoho Certification & Academy</h4>
+                        <a href="https://www.zoho.com/academy/certification.html" target="_blank" rel="noopener">View
+                            certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Atlassian</span>
+                            <span>Oct 2023</span>
+                    </div>
+                        <h4>Atlassian University & Certifications</h4>
+                        <a href="https://www.atlassian.com/university/certification" target="_blank" rel="noopener">View
+                            certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>GitHub</span>
+                            <span>Mar 2023</span>
+                    </div>
+                        <h4>GitHub Training & Certification</h4>
+                        <a href="https://training.github.com/" target="_blank" rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Intel</span>
+                            <span>Aug 2023</span>
+                        </div>
+                        <h4>Intel Professional Certifications & Training</h4>
+                        <a href="https://www.intel.com/content/www/us/en/education/certification.html" target="_blank"
+                            rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>NVIDIA</span>
+                            <span>Jun 2024</span>
+                    </div>
+                        <h4>NVIDIA Deep Learning Institute</h4>
+                        <a href="https://www.nvidia.com/en-us/deep-learning-ai/education/" target="_blank"
+                            rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>SAS</span>
+                            <span>Dec 2023</span>
+                        </div>
+                        <h4>SAS Certification</h4>
+                        <a href="https://www.sas.com/en_us/certification.html" target="_blank" rel="noopener">View
+                            certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>MongoDB</span>
+                            <span>Feb 2023</span>
+                    </div>
+                        <h4>MongoDB University Certifications</h4>
+                        <a href="https://university.mongodb.com/" target="_blank" rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Elastic</span>
+                            <span>Apr 2023</span>
+                    </div>
+                        <h4>Elastic Training & Certification</h4>
+                        <a href="https://www.elastic.co/training/certification" target="_blank"
+                            rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Tableau</span>
+                            <span>Jan 2024</span>
+                    </div>
+                        <h4>Tableau Certified Associate</h4>
+                        <a href="https://www.tableau.com/support/certification" target="_blank" rel="noopener">View
+                            certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Splunk</span>
+                            <span>Jul 2023</span>
+                    </div>
+                        <h4>Splunk Enterprise Certified Admin</h4>
+                        <a href="https://www.splunk.com/en_us/training/certification.html" target="_blank"
+                            rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Cisco</span>
+                            <span>May 2023</span>
+                    </div>
+                        <h4>Cisco CyberOps Associate</h4>
+                        <a href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/cyberops-associate.html"
+                            target="_blank" rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Red Hat</span>
+                            <span>Nov 2023</span>
+                    </div>
+                        <h4>Red Hat Certified Engineer (RHCE)</h4>
+                        <a href="https://www.redhat.com/en/services/training-and-certification" target="_blank"
+                            rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>VMware</span>
+                            <span>Dec 2023</span>
+                    </div>
+                        <h4>VMware vSphere Certifications</h4>
+                        <a href="https://www.vmware.com/education-services/certification.html" target="_blank"
+                            rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Microsoft</span>
+                            <span>Aug 2023</span>
+                    </div>
+                        <h4>Microsoft Azure Data Fundamentals</h4>
+                        <a href="https://learn.microsoft.com/en-us/certifications/" target="_blank" rel="noopener">View
+                            certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Adobe</span>
+                            <span>Feb 2024</span>
+                    </div>
+                        <h4>Adobe Certified Expert (ACE)</h4>
+                        <a href="https://learning.adobe.com/certification.html" target="_blank" rel="noopener">View
+                            certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Oracle</span>
+                            <span>Sep 2023</span>
+                    </div>
+                        <h4>Oracle Cloud Infrastructure Certifications</h4>
+                        <a href="https://education.oracle.com" target="_blank" rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Google Cloud</span>
+                            <span>Jun 2024</span>
+                    </div>
+                        <h4>Google Cloud Certifications</h4>
+                        <a href="https://cloud.google.com/certification" target="_blank" rel="noopener">View
+                            certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Salesforce</span>
+                            <span>May 2024</span>
+                    </div>
+                        <h4>Salesforce Marketing Cloud Certifications</h4>
+                        <a href="https://trailhead.salesforce.com" target="_blank" rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Atlassian</span>
+                            <span>Oct 2022</span>
+                    </div>
+                        <h4>Atlassian Certified Jira Administrator</h4>
+                        <a href="https://www.atlassian.com/university/certification" target="_blank" rel="noopener">View
+                            certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>MongoDB</span>
+                            <span>Jan 2023</span>
+                    </div>
+                        <h4>MongoDB Certified DBA</h4>
+                        <a href="https://university.mongodb.com/" target="_blank" rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>Elastic</span>
+                            <span>Aug 2023</span>
+                    </div>
+                        <h4>Elastic Certified Engineer</h4>
+                        <a href="https://www.elastic.co/training/certification" target="_blank"
+                            rel="noopener">View certificate</a>
+                    </article>
+
+                    <article class="certificate-card">
+                        <div class="certificate-meta">
+                            <span>GitHub</span>
+                            <span>Apr 2023</span>
+                    </div>
+                        <h4>GitHub Certified: GitHub Actions</h4>
+                        <a href="https://training.github.com/" target="_blank" rel="noopener">View certificate</a>
+                    </article>
         </div>
         </div>
         </div>
@@ -2385,8 +2600,8 @@ regulations.</p>
             </div>
         </div>
     </footer>
-
-
-
-
-
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
